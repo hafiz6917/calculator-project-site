@@ -1,33 +1,33 @@
-const display = document.querySelector('.display');
-const buttons = document.querySelectorAll('button');
+const display = document.getElementById('display');
+const buttons = document.querySelectorAll('.buttons button');
+const clearBtn = document.querySelector('.clear');
+const equalsBtn = document.querySelector('.equals');
+const backspaceBtn = document.querySelector('.backspace');
+const offBtn = document.querySelector('.off');
 
-let currentInput = '';
-
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const value = button.textContent;
-
-    if (button.classList.contains('clear')) {
-      currentInput = '';
-      display.value = '';
-    } else if (button.classList.contains('equal')) {
-      try {
-        currentInput = eval(
-          currentInput.replace(/÷/g, '/').replace(/×/g, '*').replace(/−/g, '-')
-        );
-        display.value = currentInput;
-      } catch {
-        display.value = 'خطأ';
-        currentInput = '';
-      }
-    } else if (button.classList.contains('back')) {
-      currentInput = currentInput.slice(0, -1);
-      display.value = currentInput;
-    } else if (button.classList.contains('off')) {
-      window.close();
-    } else {
-      currentInput += value;
-      display.value = currentInput;
-    }
+buttons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    display.value += btn.textContent;
   });
+});
+
+clearBtn.addEventListener('click', () => {
+  display.value = '';
+});
+
+equalsBtn.addEventListener('click', () => {
+  try {
+    display.value = eval(display.value);
+  } catch {
+    display.value = 'Error احا يعم';
+  }
+});
+
+backspaceBtn.addEventListener('click', () => {
+  display.value = display.value.slice(0, -1);
+});
+
+offBtn.addEventListener('click', () => {
+  window.close(); // يعمل في بعض المتصفحات فقط
+  window.location.href = "about:blank";
 });
