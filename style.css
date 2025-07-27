@@ -65,7 +65,7 @@ button:active {
 }
 
 button.clear {
-  grid-column: span 2;
+  grid-column: span 1;
   background: linear-gradient(45deg, #e74c3c, #c0392b);
   border-radius: 10px;
 }
@@ -75,18 +75,19 @@ button.clear:hover {
 }
 
 button.op {
-  background-color: #ffc107;
+  background: linear-gradient(45deg, #ffb300, #ff6f00);
   color: #000;
   font-weight: bold;
-  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.6);
 }
 
 button.op:hover {
-  background-color: #ffdd57;
+  background: linear-gradient(45deg, #ffca28, #f57c00);
 }
 
 button.equal {
-  grid-column: span 2;
+  grid-column: span 1;
   background: linear-gradient(45deg, #4caf50, #2e7d32);
   border-radius: 10px;
 }
@@ -102,4 +103,17 @@ button.back {
 
 button.back:hover {
   background-color: #78909c;
+}
+
+button.off {
+  grid-column: span 2;
+  background: linear-gradient(45deg, #212121, #000);
+  color: red;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+button.off:hover {
+  background: linear-gradient(45deg, #000, #212121);
+  color: #ff4444;
 }

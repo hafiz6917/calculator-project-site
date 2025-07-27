@@ -12,7 +12,9 @@ buttons.forEach(button => {
       display.value = '';
     } else if (button.classList.contains('equal')) {
       try {
-        currentInput = eval(currentInput);
+        currentInput = eval(
+          currentInput.replace(/÷/g, '/').replace(/×/g, '*').replace(/−/g, '-')
+        );
         display.value = currentInput;
       } catch {
         display.value = 'خطأ';
@@ -21,6 +23,8 @@ buttons.forEach(button => {
     } else if (button.classList.contains('back')) {
       currentInput = currentInput.slice(0, -1);
       display.value = currentInput;
+    } else if (button.classList.contains('off')) {
+      window.close();
     } else {
       currentInput += value;
       display.value = currentInput;
