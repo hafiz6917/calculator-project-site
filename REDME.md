@@ -7,7 +7,8 @@ This project performs simple arithmetic operations: addition, subtraction, multi
 
 ## 📸 Screenshot
 
-![Calculator Screenshot](screenshot.png)
+<img width="681" height="850" alt="image" src="https://github.com/user-attachments/assets/a9e9ab83-dfe4-4275-83e5-9acd89d19324" />
+
 
 ---
 
