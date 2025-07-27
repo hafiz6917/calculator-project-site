@@ -13,11 +13,11 @@ body {
 }
 
 .calculator {
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.6); /* شفاف بنسبة 60% */
   padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 0 30px gold;
-  width: 300px;
+  box-shadow: 0 0 25px rgba(255, 255, 0, 0.7);
+  width: 350px;
 }
 
 .display {
