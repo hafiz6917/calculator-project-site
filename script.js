@@ -7,7 +7,10 @@ const offBtn = document.querySelector('.off');
 
 buttons.forEach(btn => {
   btn.addEventListener('click', () => {
-    display.value += btn.textContent;
+    // تجاهل زر backspace من الإضافة
+    if (!btn.classList.contains('backspace')) {
+      display.value += btn.textContent;
+    }
   });
 });
 
@@ -19,7 +22,7 @@ equalsBtn.addEventListener('click', () => {
   try {
     display.value = eval(display.value);
   } catch {
-    display.value = 'Error احا يعم';
+    display.value = 'Error';
   }
 });
 
@@ -28,6 +31,6 @@ backspaceBtn.addEventListener('click', () => {
 });
 
 offBtn.addEventListener('click', () => {
-  window.close(); // يعمل في بعض المتصفحات فقط
+  window.close(); // بعض المتصفحات فقط
   window.location.href = "about:blank";
 });
