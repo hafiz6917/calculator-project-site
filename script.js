@@ -22,7 +22,7 @@ equalsBtn.addEventListener('click', () => {
   try {
     display.value = eval(display.value);
   } catch {
-    display.value = 'Error';
+    display.value = 'احا يعم. اكتب صح';
   }
 });
 
