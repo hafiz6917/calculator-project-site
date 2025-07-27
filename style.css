@@ -1,75 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
-body {
-  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/1600px-Kheops-Pyramid.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Orbitron', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+button.op {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.5);
 }
 
-.calculator {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
-  width: 350px;
-  backdrop-filter: blur(5px);
+button.op:hover {
+  background-color: #ffdd57;
 }
 
-.display {
-  width: 100%;
-  height: 60px;
-  font-size: 28px;
-  text-align: right;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  background-color: #000;
-  color: #0f0;
-  box-shadow: inset 0 0 10px #0f0;
-  text-shadow: 1px 1px 2px #0f0;
-}
-
-.buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-}
-
-button {
-  width: 70px;
-  height: 70px;
-  font-size: 22px;
-  border: none;
-  border-radius: 50%;
-  background: radial-gradient(circle at top left, #444, #111);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
-  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.3);
-}
-
-button:hover {
-  background: radial-gradient(circle at top left, #666, #222);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.6);
-}
-
-button:active {
-  transform: scale(0.94);
-  box-shadow: 0 2px 5px rgba(255, 215, 0, 0.2);
-}
-
-button.clear {
-  grid-column: span 4;
-  background: linear-gradient(45deg, #e74c3c, #c0392b);
+button.equal {
+  grid-column: span 2;
+  background: linear-gradient(45deg, #4caf50, #2e7d32);
   border-radius: 10px;
 }
 
-button.clear:hover {
-  background: linear-gradient(45deg, #ff5e57, #d32f2f);
+button.equal:hover {
+  background: linear-gradient(45deg, #66bb6a, #388e3c);
+}
+
+button.back {
+  background-color: #607d8b;
+  font-weight: bold;
+}
+
+button.back:hover {
+  background-color: #78909c;
 }
